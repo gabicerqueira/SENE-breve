@@ -1,0 +1,155 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'AsapSemiBold';
+    src: url(fonts/Asap_Condensed-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'LibreSemiBold';
+    src: url(fonts/LibreFranklin-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'WorkMedium';
+    src: url(fonts/WorkSans-Medium.ttf);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    transform: translate(-50%, -50%);
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #24205d84; /* Ajuste o valor de 0.5 para controlar a opacidade */
+    z-index: -1;
+}
+
+#barraProgresso {
+    width: 400px;
+    height: 20px;
+    background-color: #c7c7c7;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: solid 1px rgb(255, 255, 255);
+}
+
+#progresso {
+    height: 100%;
+    width: 0;
+    background-color: #24205d;
+    border-radius: 10px;
+    transition: width 1s linear;
+}
+
+#carregando{
+    color: white;
+    font-family: 'WorkMedium';
+    font-size: 18px;
+}
+
+.tudo{
+    text-align: center;
+}
+
+h1{
+    color: white;
+    font-family: 'LibreSemiBold';
+    font-size: 80px;
+    letter-spacing: 7px;
+    margin-bottom: 40px;
+}
+
+p{
+    color: white;
+    font-family: 'WorkMedium';
+    font-size: 25px;
+}
+
+.tempo {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+}
+
+.quadradinho{
+    display: flex;
+    flex-direction: column;
+    background-color: #24205d;
+    color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-family: 'WorkMedium';
+    font-size: 23px;
+    border: 2px solid rgb(223, 223, 223);
+}
+
+img{
+    width: 130px;
+}
+
+.div-texto{
+    margin-top: 120px;
+}
+
+
+@media screen and (max-width: 720px){
+
+    .tudo{
+        margin: 0 80px;
+    }
+
+    h1{
+        font-size: 50px;
+    }
+
+    .quadradinho{
+        padding: 10px 15px;
+        font-size: 19px;
+    }
+
+    .tempo{
+        margin: 0;
+    }
+
+    p{
+        font-size: 20px;
+    }
+}
